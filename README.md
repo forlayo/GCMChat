@@ -5,6 +5,6 @@ Código de chat punto a punto usando GCM hecho para [IEEE Developer Days'13 de l
 
 
 Requisitos
-=======
+-------------
 
 Utiliza Android GCM por lo que requiere que el dispositivo tenga instalado Android 2.2 o superior.
