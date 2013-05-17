@@ -1,7 +1,7 @@
 GCMChat
 =======
 
-Código de chat punto a punto usando GCM hecho para [IEEE Developer Days'13 de la Universidad Miguel Hernández](http://umh.ieeespain.org/), cualquier duda o pregunta sobre la implementación póngase en contacto conmigo y le responderé gustosamente.
+Código de chat usando GCM, hecho para [IEEE Developer Days'13 de la Universidad Miguel Hernández](http://umh.ieeespain.org/), cualquier duda o pregunta sobre la implementación póngase en contacto conmigo y le responderé gustosamente.
 
 
 Requisitos
