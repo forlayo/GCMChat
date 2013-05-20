@@ -18,6 +18,8 @@ public class Database {
 
     private static final String server_id="AIzaSyAt9DliLd6rBO140cw4_lxAjCbzROzvwv8";
 
+    private static final String TAG = "Database";
+    
     private static final String PREFERENCES_FILE = "gcmchat_preferences";
     private static final String PREFS_NICK = "nick";
     private static final String PREFS_GCMID = "gcm_id";
@@ -82,16 +84,16 @@ public class Database {
 
     public static void guardaContacto(Context ctx, String gcm_id, String nick )
     {
-        Log.d("CULO", "Guarda contacto");
+        Log.d(TAG, "Guarda contacto");
         ContentResolver cResolver = ctx.getContentResolver();
         if(cResolver==null)return;
 
-        Log.d("CULO", "Guarda contacto");
+        Log.d(TAG, "Guarda contacto");
 
         ContentProviderClient cpClient = cResolver.acquireContentProviderClient(ContactosProvider.CONTACTOS_CONTENT_URI);
         if (cpClient == null) return;
 
-        Log.d("CULO", "Guarda contacto");
+        Log.d(TAG, "Guarda contacto");
 
         ContentValues values = new ContentValues();
         values.put(ContactosProvider.DB_GCM_ID, gcm_id);

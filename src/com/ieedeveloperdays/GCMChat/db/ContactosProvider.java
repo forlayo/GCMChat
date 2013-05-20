@@ -16,7 +16,8 @@ public class ContactosProvider extends ContentProvider {
     public static final String PROVIDER_NAME = "com.ieedeveloperdays.GCMChat.Contactos";
     public static final Uri CONTACTOS_CONTENT_URI = Uri.parse("content://"+ PROVIDER_NAME + "/contactos");
 
-
+    private static final String TAG = "ContactosProvider";
+    
     public static final String DB_ID = BaseColumns._ID;
     public static final String DB_GCM_ID = "gcm_id";
     public static final String DB_NAME = "name";
@@ -45,7 +46,7 @@ public class ContactosProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
-        Log.d("CULO", "Provider create");
+        Log.d(TAG, "Provider create");
         Context context = getContext();
         mDbHelper = DataBaseHelper.getInstance(context);
         dataBase = mDbHelper.getWritableDatabase();
@@ -71,7 +72,7 @@ public class ContactosProvider extends ContentProvider {
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
 
-        Log.d("CULO", "Provider query");
+        Log.d(TAG, "Provider query");
 
         SQLiteQueryBuilder sqlBuilder = new SQLiteQueryBuilder();
         sqlBuilder.setTables(DataBaseHelper.CONTACTOS_TABLE);
@@ -107,7 +108,7 @@ public class ContactosProvider extends ContentProvider {
     @Override
     public Uri insert(Uri uri, ContentValues values) {
 
-        Log.d("CULO", "Provider insert");
+        Log.d(TAG, "Provider insert");
 
         long rowID = getOrOpenDatabase().insert(DataBaseHelper.CONTACTOS_TABLE, "", values);
 
